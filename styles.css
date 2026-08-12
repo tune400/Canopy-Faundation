@@ -53,6 +53,18 @@ h1, h2, h3 { font-family: var(--font-display); margin: 0; }
 p { margin: 0; }
 :focus-visible { outline: 3px solid var(--canopy-light); outline-offset: 3px; }
 
+/* ---------- Icons (Lucide-style line icons) ---------- */
+.icon {
+  width: 24px;
+  height: 24px;
+  fill: none;
+  stroke: currentColor;
+  stroke-width: 1.7;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+  display: block;
+}
+
 .container {
   max-width: var(--max-width);
   margin: 0 auto;
@@ -317,15 +329,17 @@ p { margin: 0; }
   box-shadow: 0 20px 40px -22px rgba(18,55,42,0.4);
 }
 .card__icon {
-  font-size: 1.8rem;
   display: inline-flex;
   align-items: center;
   justify-content: center;
   width: 3rem; height: 3rem;
   border-radius: 50%;
   background: var(--sand);
+  color: var(--canopy);
   margin-bottom: 1.2rem;
 }
+.card__icon .icon { width: 26px; height: 26px; }
+.card--dark .card__icon { background: rgba(247,246,240,0.1); color: var(--sand); }
 .card__title { font-size: 1.08rem; font-weight: 700; color: var(--forest); margin-bottom: 0.6rem; }
 .card__text { color: var(--text-muted); font-size: 0.95rem; }
 .card--dark { background: rgba(247,246,240,0.06); border-color: rgba(247,246,240,0.16); }
@@ -441,13 +455,14 @@ p { margin: 0; }
 }
 .minicard:hover { transform: translateY(-4px); border-color: var(--canopy); }
 .minicard__icon {
-  font-size: 1.5rem;
   display: inline-flex; align-items: center; justify-content: center;
   width: 2.6rem; height: 2.6rem;
   border-radius: 50%;
   background: var(--sand);
+  color: var(--canopy);
   margin-bottom: 1rem;
 }
+.minicard__icon .icon { width: 22px; height: 22px; }
 .minicard__title { font-size: 1rem; font-weight: 700; color: var(--forest); margin-bottom: 0.4rem; }
 .minicard__text { font-size: 0.9rem; color: var(--text-muted); }
 
@@ -469,7 +484,15 @@ p { margin: 0; }
   transition: transform 0.2s var(--ease), border-color 0.2s var(--ease);
 }
 .peoplecard:hover { transform: translateY(-4px); border-color: var(--canopy); }
-.peoplecard span { font-size: 1.9rem; display: block; margin-bottom: 0.8rem; }
+.peoplecard__icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 3rem; height: 3rem;
+  border-radius: 50%;
+  background: var(--sand);
+  color: var(--canopy);
+  margin-bottom: 0.9rem;
+}
+.peoplecard__icon .icon { width: 24px; height: 24px; }
 .peoplecard p { font-size: 0.88rem; font-weight: 600; color: var(--forest); }
 
 /* ---------- Core values ---------- */
@@ -486,11 +509,12 @@ p { margin: 0; }
   background: var(--off-white);
   border: 1.5px solid var(--canopy);
   display: flex; align-items: center; justify-content: center;
-  font-size: 1.8rem;
+  color: var(--canopy);
   margin-bottom: 1rem;
-  transition: transform 0.25s var(--ease), background 0.25s var(--ease);
+  transition: transform 0.25s var(--ease), background 0.25s var(--ease), color 0.25s var(--ease);
 }
-.value:hover .value__circle { transform: scale(1.08); background: var(--canopy); }
+.value__circle .icon { width: 28px; height: 28px; }
+.value:hover .value__circle { transform: scale(1.08); background: var(--canopy); color: var(--off-white); }
 .value__label { font-size: 0.88rem; font-weight: 600; color: var(--forest); }
 
 /* ---------- Impact ---------- */
