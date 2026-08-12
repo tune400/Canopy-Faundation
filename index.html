@@ -12,11 +12,107 @@
 </head>
 <body>
 
+<!-- ============ ICON SPRITE (Lucide-style line icons) ============ -->
+<svg style="display:none" aria-hidden="true">
+  <defs>
+    <symbol id="icon-book-open" viewBox="0 0 24 24">
+      <path d="M12 6.5C10 5 7 4.5 4 5v13c3-.5 6 0 8 1.5"/>
+      <path d="M12 6.5c2-1.5 5-2 8-1.5v13c-3-.5-6 0-8 1.5"/>
+      <path d="M12 6.5V20"/>
+    </symbol>
+    <symbol id="icon-pine-tree" viewBox="0 0 24 24">
+      <path d="M12 2 7 9h2.5L6 14h3v6h6v-6h3l-3.5-5H18L12 2Z"/>
+    </symbol>
+    <symbol id="icon-leaf" viewBox="0 0 24 24">
+      <path d="M20 4c-8.5 0-15 5.5-15 14 0 .3 0 .7.05 1 8.5 0 14-6 14-14 0-.3 0-.7-.05-1Z"/>
+      <path d="M5.5 18.5C9.5 14 13.5 10 18.5 5.5"/>
+    </symbol>
+    <symbol id="icon-radar" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="1.6" fill="currentColor" stroke="none"/>
+      <path d="M12 12 20 6"/>
+      <path d="M8 12a4 4 0 0 1 4-4"/>
+      <path d="M5 12a7 7 0 0 1 7-7"/>
+      <path d="M3 20h18"/>
+    </symbol>
+    <symbol id="icon-sprout" viewBox="0 0 24 24">
+      <path d="M12 22v-9"/>
+      <path d="M12 13C12 8 8 6 4 6c0 4.5 3 7 8 7Z"/>
+      <path d="M12 10c0-3.5 3-5 6-5 0 3.5-2.5 6-6 6"/>
+    </symbol>
+    <symbol id="icon-coins" viewBox="0 0 24 24">
+      <circle cx="9" cy="10" r="6"/>
+      <path d="M14 6.5A6 6 0 1 1 8.5 16"/>
+    </symbol>
+    <symbol id="icon-globe" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9"/>
+      <path d="M3 12h18"/>
+      <path d="M12 3c3 3 3 15 0 18"/>
+      <path d="M12 3c-3 3-3 15 0 18"/>
+    </symbol>
+    <symbol id="icon-megaphone" viewBox="0 0 24 24">
+      <path d="M3 10v4h3l6 4V6l-6 4H3Z"/>
+      <path d="M14 9a3 3 0 0 1 0 6"/>
+      <path d="M17 6a7 7 0 0 1 0 12"/>
+    </symbol>
+    <symbol id="icon-map" viewBox="0 0 24 24">
+      <path d="M9 4 3 6v14l6-2 6 2 6-2V4l-6 2-6-2Z"/>
+      <path d="M9 4v14"/><path d="M15 6v14"/>
+    </symbol>
+    <symbol id="icon-users" viewBox="0 0 24 24">
+      <circle cx="9" cy="8" r="3.2"/>
+      <path d="M3 20c0-3.5 2.7-6 6-6s6 2.5 6 6"/>
+      <path d="M16 5.2a3.2 3.2 0 0 1 0 6.2"/>
+      <path d="M15 14c2.8.4 5 2.6 5 6"/>
+    </symbol>
+    <symbol id="icon-wheat" viewBox="0 0 24 24">
+      <path d="M12 22V8"/>
+      <path d="M12 8c-1.5-1.5-1.5-4 0-6 1.5 2 1.5 4.5 0 6Z"/>
+      <path d="M9 11c-1.5-1-3-1-4 0 1 1.5 3 2 5 1"/>
+      <path d="M15 11c1.5-1 3-1 4 0-1 1.5-3 2-5 1"/>
+      <path d="M9 15c-1.5-1-3-1-4 0 1 1.5 3 2 5 1"/>
+      <path d="M15 15c1.5-1 3-1 4 0-1 1.5-3 2-5 1"/>
+    </symbol>
+    <symbol id="icon-heart" viewBox="0 0 24 24">
+      <path d="M12 20.5 4.5 13c-2-2-2-5 0-6.8 1.9-1.7 4.7-1.4 6.3.5l1.2 1.4 1.2-1.4c1.6-1.9 4.4-2.2 6.3-.5 2 1.8 2 4.8 0 6.8L12 20.5Z"/>
+    </symbol>
+    <symbol id="icon-home" viewBox="0 0 24 24">
+      <path d="M4 11 12 4l8 7"/>
+      <path d="M6 10v9h12v-9"/>
+      <path d="M10 19v-5h4v5"/>
+    </symbol>
+    <symbol id="icon-tree-home" viewBox="0 0 24 24">
+      <path d="M8 3 5 8h1.8L5 12h2v7h2v-7h2L9 8h1.8L8 3Z"/>
+      <path d="M13 12 20 8l7 4" transform="translate(-4 0)"/>
+      <path d="M14 21v-6l4-2.3 4 2.3v6"/>
+      <path d="M17 21v-3"/>
+    </symbol>
+    <symbol id="icon-school" viewBox="0 0 24 24">
+      <path d="M12 3 3 8l9 5 9-5-9-5Z"/>
+      <path d="M6 11v5c0 1.5 2.5 3 6 3s6-1.5 6-3v-5"/>
+      <path d="M21 9v6"/>
+    </symbol>
+    <symbol id="icon-handshake" viewBox="0 0 24 24">
+      <path d="M2.5 11h4l3-3 3 3h2l4-4"/>
+      <path d="M7 11l3.2 3.8 2.6-1.8 2.7 2.5"/>
+      <path d="M20.5 7 22 8.5l-4 4"/>
+    </symbol>
+    <symbol id="icon-shield-check" viewBox="0 0 24 24">
+      <path d="M12 3 5 6v6c0 5 3 8 7 9 4-1 7-4 7-9V6l-7-3Z"/>
+      <path d="M9 12l2 2 4-4"/>
+    </symbol>
+    <symbol id="icon-lightbulb" viewBox="0 0 24 24">
+      <path d="M9 18h6"/>
+      <path d="M10 21h4"/>
+      <path d="M12 3a6 6 0 0 0-4 10.5c.7.6 1 1.3 1 2.5h6c0-1.2.3-1.9 1-2.5A6 6 0 0 0 12 3Z"/>
+    </symbol>
+  </defs>
+</svg>
+
 <!-- ============ NAV ============ -->
 <header class="nav" id="nav">
   <div class="nav__inner">
     <a href="#home" class="nav__brand">
-      <img src="logo.png" alt="logo" class="nav__brand-logo">
+      <img src="logo.png" alt="Canopy Foundation Tanzania" class="nav__brand-logo">
       CANOPY FOUNDATION
     </a>
     <nav class="nav__links" id="navLinks">
@@ -118,22 +214,22 @@
     </div>
     <div class="grid grid--4">
       <div class="card">
-        <span class="card__icon">🌱</span>
+        <span class="card__icon"><svg class="icon"><use href="#icon-book-open"/></svg></span>
         <h3 class="card__title">Community Awareness &amp; Education</h3>
         <p class="card__text">Building environmental knowledge and encouraging positive conservation behavior among communities living near threatened and degraded forests.</p>
       </div>
       <div class="card">
-        <span class="card__icon">🌳</span>
+        <span class="card__icon"><svg class="icon"><use href="#icon-pine-tree"/></svg></span>
         <h3 class="card__title">Forest Restoration</h3>
         <p class="card__text">Mobilizing, training, and equipping communities to restore degraded forests through tree planting, nature-based solutions, and assisted natural regeneration.</p>
       </div>
       <div class="card">
-        <span class="card__icon">🐝</span>
+        <span class="card__icon"><svg class="icon"><use href="#icon-leaf"/></svg></span>
         <h3 class="card__title">Green Livelihoods</h3>
         <p class="card__text">Supporting sustainable income opportunities including agroforestry, beekeeping, eco-tourism, and sustainable non-timber forest products.</p>
       </div>
       <div class="card">
-        <span class="card__icon">🛰️</span>
+        <span class="card__icon"><svg class="icon"><use href="#icon-radar"/></svg></span>
         <h3 class="card__title">Research &amp; Innovation</h3>
         <p class="card__text">Using scientific research, GIS technology, and policy advocacy to strengthen community-led conservation and long-term restoration.</p>
       </div>
@@ -231,32 +327,32 @@
     </div>
     <div class="grid grid--3">
       <div class="minicard">
-        <span class="minicard__icon">🌳</span>
+        <span class="minicard__icon"><svg class="icon"><use href="#icon-pine-tree"/></svg></span>
         <h3 class="minicard__title">Community Forestry</h3>
         <p class="minicard__text">Participatory forest management and community conservation.</p>
       </div>
       <div class="minicard">
-        <span class="minicard__icon">🌱</span>
+        <span class="minicard__icon"><svg class="icon"><use href="#icon-sprout"/></svg></span>
         <h3 class="minicard__title">Landscape Restoration</h3>
         <p class="minicard__text">Tree planting and assisted natural regeneration.</p>
       </div>
       <div class="minicard">
-        <span class="minicard__icon">🐝</span>
+        <span class="minicard__icon"><svg class="icon"><use href="#icon-coins"/></svg></span>
         <h3 class="minicard__title">Green Enterprise</h3>
         <p class="minicard__text">Agroforestry, beekeeping and sustainable livelihoods.</p>
       </div>
       <div class="minicard">
-        <span class="minicard__icon">🌍</span>
+        <span class="minicard__icon"><svg class="icon"><use href="#icon-globe"/></svg></span>
         <h3 class="minicard__title">Climate Resilience</h3>
         <p class="minicard__text">Nature-based solutions and climate adaptation.</p>
       </div>
       <div class="minicard">
-        <span class="minicard__icon">📚</span>
+        <span class="minicard__icon"><svg class="icon"><use href="#icon-megaphone"/></svg></span>
         <h3 class="minicard__title">Environmental Education</h3>
         <p class="minicard__text">Awareness campaigns and public outreach.</p>
       </div>
       <div class="minicard">
-        <span class="minicard__icon">🛰️</span>
+        <span class="minicard__icon"><svg class="icon"><use href="#icon-map"/></svg></span>
         <h3 class="minicard__title">Sustainable Land Management</h3>
         <p class="minicard__text">Research, GIS and innovative conservation approaches.</p>
       </div>
@@ -300,12 +396,30 @@
       <h2 class="h2">Conservation Starts With People</h2>
     </div>
     <div class="grid grid--6">
-      <div class="peoplecard"><span>🧑🏾‍🌾</span><p>Local Communities</p></div>
-      <div class="peoplecard"><span>🌾</span><p>Smallholder Farmers</p></div>
-      <div class="peoplecard"><span>👩🏾‍🤝‍👨🏾</span><p>Women &amp; Youth</p></div>
-      <div class="peoplecard"><span>🏘️</span><p>Village Natural Resource Committees</p></div>
-      <div class="peoplecard"><span>🌲</span><p>Forest-dependent Households</p></div>
-      <div class="peoplecard"><span>🏫</span><p>Schools &amp; Community Organizations</p></div>
+      <div class="peoplecard">
+        <span class="peoplecard__icon"><svg class="icon"><use href="#icon-users"/></svg></span>
+        <p>Local Communities</p>
+      </div>
+      <div class="peoplecard">
+        <span class="peoplecard__icon"><svg class="icon"><use href="#icon-wheat"/></svg></span>
+        <p>Smallholder Farmers</p>
+      </div>
+      <div class="peoplecard">
+        <span class="peoplecard__icon"><svg class="icon"><use href="#icon-heart"/></svg></span>
+        <p>Women &amp; Youth</p>
+      </div>
+      <div class="peoplecard">
+        <span class="peoplecard__icon"><svg class="icon"><use href="#icon-home"/></svg></span>
+        <p>Village Natural Resource Committees</p>
+      </div>
+      <div class="peoplecard">
+        <span class="peoplecard__icon"><svg class="icon"><use href="#icon-tree-home"/></svg></span>
+        <p>Forest-dependent Households</p>
+      </div>
+      <div class="peoplecard">
+        <span class="peoplecard__icon"><svg class="icon"><use href="#icon-school"/></svg></span>
+        <p>Schools &amp; Community Organizations</p>
+      </div>
     </div>
   </div>
 </section>
@@ -319,23 +433,23 @@
     </div>
     <div class="values">
       <div class="value">
-        <div class="value__circle">🤝</div>
+        <div class="value__circle"><svg class="icon"><use href="#icon-handshake"/></svg></div>
         <p class="value__label">Community Empowerment</p>
       </div>
       <div class="value">
-        <div class="value__circle">🔎</div>
+        <div class="value__circle"><svg class="icon"><use href="#icon-shield-check"/></svg></div>
         <p class="value__label">Integrity &amp; Transparency</p>
       </div>
       <div class="value">
-        <div class="value__circle">🌿</div>
+        <div class="value__circle"><svg class="icon"><use href="#icon-leaf"/></svg></div>
         <p class="value__label">Environmental Stewardship</p>
       </div>
       <div class="value">
-        <div class="value__circle">🌍</div>
+        <div class="value__circle"><svg class="icon"><use href="#icon-globe"/></svg></div>
         <p class="value__label">Inclusiveness &amp; Partnership</p>
       </div>
       <div class="value">
-        <div class="value__circle">💡</div>
+        <div class="value__circle"><svg class="icon"><use href="#icon-lightbulb"/></svg></div>
         <p class="value__label">Innovation &amp; Sustainability</p>
       </div>
     </div>
@@ -401,7 +515,7 @@
 <footer class="footer">
   <div class="container footer__grid">
     <div class="footer__brand">
-      <img src="logo.png" alt="logo" class="footer__logo">
+      <img src="logo.png" alt="Canopy Foundation Tanzania" class="footer__logo">
       <p class="footer__name">Canopy Foundation Tanzania</p>
       <p class="footer__tag">Restoring Forests. Empowering Communities.</p>
       <div class="footer__social">
